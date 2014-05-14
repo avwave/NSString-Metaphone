@@ -21,6 +21,9 @@
 		2056E8EC1923563400EAA99D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2056E8CE1923563300EAA99D /* UIKit.framework */; };
 		2056E8F41923563400EAA99D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2056E8F21923563400EAA99D /* InfoPlist.strings */; };
 		2056E8F61923563400EAA99D /* MetaphoneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2056E8F51923563400EAA99D /* MetaphoneTests.m */; };
+		2056E904192356BB00EAA99D /* NSString+Metaphone.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2056E903192356BB00EAA99D /* NSString+Metaphone.mm */; };
+		2056E908192356E200EAA99D /* DoubleMetaphone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2056E907192356E200EAA99D /* DoubleMetaphone.cpp */; };
+		2056E90C19235AD500EAA99D /* doubleMetaphoneFuncMysql.sql in Resources */ = {isa = PBXBuildFile; fileRef = 2056E90B19235AD500EAA99D /* doubleMetaphoneFuncMysql.sql */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,14 @@
 		2056E8F11923563400EAA99D /* MetaphoneTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MetaphoneTests-Info.plist"; sourceTree = "<group>"; };
 		2056E8F31923563400EAA99D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2056E8F51923563400EAA99D /* MetaphoneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MetaphoneTests.m; sourceTree = "<group>"; };
+		2056E902192356BB00EAA99D /* NSString+Metaphone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Metaphone.h"; sourceTree = "<group>"; };
+		2056E903192356BB00EAA99D /* NSString+Metaphone.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "NSString+Metaphone.mm"; sourceTree = "<group>"; };
+		2056E905192356E200EAA99D /* DoubleMetaphone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubleMetaphone.h; sourceTree = "<group>"; };
+		2056E906192356E200EAA99D /* ShortDoubleMetaphone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShortDoubleMetaphone.h; sourceTree = "<group>"; };
+		2056E907192356E200EAA99D /* DoubleMetaphone.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DoubleMetaphone.cpp; sourceTree = "<group>"; };
+		2056E90919235A3600EAA99D /* stdafx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stdafx.h; sourceTree = "<group>"; };
+		2056E90A19235A3600EAA99D /* stringup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stringup.h; sourceTree = "<group>"; };
+		2056E90B19235AD500EAA99D /* doubleMetaphoneFuncMysql.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = doubleMetaphoneFuncMysql.sql; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +93,7 @@
 		2056E8BE1923563300EAA99D = {
 			isa = PBXGroup;
 			children = (
+				2056E8FF1923563F00EAA99D /* NSString+Metaphone */,
 				2056E8D01923563300EAA99D /* Metaphone */,
 				2056E8EF1923563400EAA99D /* MetaphoneTests */,
 				2056E8C91923563300EAA99D /* Frameworks */,
@@ -150,6 +162,21 @@
 				2056E8F21923563400EAA99D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2056E8FF1923563F00EAA99D /* NSString+Metaphone */ = {
+			isa = PBXGroup;
+			children = (
+				2056E902192356BB00EAA99D /* NSString+Metaphone.h */,
+				2056E903192356BB00EAA99D /* NSString+Metaphone.mm */,
+				2056E905192356E200EAA99D /* DoubleMetaphone.h */,
+				2056E906192356E200EAA99D /* ShortDoubleMetaphone.h */,
+				2056E907192356E200EAA99D /* DoubleMetaphone.cpp */,
+				2056E90919235A3600EAA99D /* stdafx.h */,
+				2056E90A19235A3600EAA99D /* stringup.h */,
+				2056E90B19235AD500EAA99D /* doubleMetaphoneFuncMysql.sql */,
+			);
+			path = "NSString+Metaphone";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2056E90C19235AD500EAA99D /* doubleMetaphoneFuncMysql.sql in Resources */,
 				2056E8E31923563300EAA99D /* Images.xcassets in Resources */,
 				2056E8D51923563300EAA99D /* InfoPlist.strings in Resources */,
 				2056E8DE1923563300EAA99D /* Main.storyboard in Resources */,
@@ -249,9 +277,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2056E908192356E200EAA99D /* DoubleMetaphone.cpp in Sources */,
 				2056E8E11923563300EAA99D /* ViewController.m in Sources */,
 				2056E8DB1923563300EAA99D /* AppDelegate.m in Sources */,
 				2056E8D71923563300EAA99D /* main.m in Sources */,
+				2056E904192356BB00EAA99D /* NSString+Metaphone.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

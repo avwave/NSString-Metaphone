@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "NSString+Metaphone.h"
 @interface ViewController ()
 
 @end
@@ -17,6 +17,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSLog(@"%@ : meta=%@, altmeta=%@", @"Kalayaan", [@"Kalayaan" metaphone], [@"Kalayaan" alternateMetaphone]);
+    
+    NSLog(@"%@ : meta=%@, altmeta=%@", @"Calayaan", [@"Calayaan" metaphone], [@"Calayaan" alternateMetaphone]);
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
